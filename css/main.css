@@ -1,10 +1,26 @@
 /* === general settings === */
 
+@font-face {
+  font-family: "Avenir LT";
+  src: url(/css/webfonts/avenir_light-webfont.woff2) format("woff2"),
+    url(/css/webfonts/avenir_light-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir LT";
+  src: url(/css/webfonts/avenir_heavy-webfont.woff2) format("woff2"),
+    url(/css/webfonts/avenir_heavy-webfont.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   margin: 0px;
 
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Avenir LT", sans-serif;
+  font-size: 13pt;
 }
 
 aside {
@@ -79,7 +95,7 @@ h2 {
   font-size: 17.5pt;
 }
 
-h4 {
+h3 {
   margin: 10px 0px 0px 30px;
   font-size: 10pt;
 }
@@ -137,5 +153,20 @@ main textarea {
 /* variable-content */
 
 #variable-content {
+  border-radius: 10px 10px 0px 0px;
+
   background-color: #f6eef7;
+}
+
+/* => navigation */
+#student-class-nav ul {
+  list-style-type: none;
+}
+
+#student-class-nav ul li {
+  display: inline;
+}
+
+.nav-selected {
+  font-size: 15pt;
 }
