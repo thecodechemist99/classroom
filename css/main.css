@@ -1,10 +1,14 @@
-/* general settings */
+/* === general settings === */
 
 body {
   margin: 0px;
 
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+aside {
+  margin: 0px 25px;
 }
 
 /* === structure === */
@@ -65,9 +69,73 @@ main {
 
 /* === styling === */
 
+/* headings */
+
+h1 {
+  font-size: 35pt;
+}
+
+h2 {
+  font-size: 17.5pt;
+}
+
+h4 {
+  margin: 10px 0px 0px 30px;
+  font-size: 10pt;
+}
+
+/* buttons */
+
+.submit {
+  margin: 5px 20px;
+  padding: 5px 10px;
+
+  border-radius: 10px;
+}
+
 /* main */
 
 main {
   background-color: #f2f2f2;
   border-radius: 10px 10px 0px 0px;
+}
+
+#presentation-area {
+  margin: 20px 20px 0px 20px;
+  background: white;
+}
+
+form {
+  margin: 20px;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+main textarea {
+  width: 70%;
+
+  align-self: stretch;
+  border-radius: 10px;
+}
+
+/* class-overview */
+
+#class-overview {
+  margin-top: 10px;
+}
+
+.people {
+  width: calc(100% - 60px);
+  margin: 10px 0px 20px 0px;
+  padding: 20px 20px 20px 40px;
+
+  border-radius: 40px;
+  background-color: #cde4f9;
+}
+
+/* variable-content */
+
+#variable-content {
+  background-color: #f6eef7;
 }
