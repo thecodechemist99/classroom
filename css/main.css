@@ -21,10 +21,16 @@ body {
 
   font-family: "Avenir LT", sans-serif;
   font-size: 13pt;
+
+  overflow: hidden;
 }
 
 aside {
   margin: 0px 25px;
+}
+
+textarea {
+  resize: none;
 }
 
 /* === structure === */
@@ -73,6 +79,15 @@ main {
   grid-template-rows: 50px auto 100px;
 }
 
+#chat-section {
+  grid-area: 2 / 1 / span 2 / span 1;
+
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+/* chat-section */
+
 /* header */
 
 #logo {
@@ -113,7 +128,7 @@ h3 {
 /* buttons */
 
 .submit {
-  margin: 5px 20px;
+  margin: 5px 0px 5px 20px;
   padding: 5px 10px;
 
   border-radius: 10px;
@@ -180,4 +195,25 @@ main textarea {
 
 .nav-selected {
   font-size: 15pt;
+}
+
+/* chat-section */
+
+#chat-section {
+  margin: 15px 15px 0px 15px;
+}
+
+#chat {
+  background-color: white;
+}
+
+#chat-section form {
+  margin: auto 0px;
+}
+
+#chat-section textarea {
+  width: 100%;
+
+  align-self: stretch;
+  border-radius: 10px;
 }
