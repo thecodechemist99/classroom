@@ -66,6 +66,13 @@ main {
   grid-area: 2 / 3 / span 2 / span 1;
 }
 
+/* variable-content grid */
+
+#variable-content {
+  display: grid;
+  grid-template-rows: 50px auto 100px;
+}
+
 /* header */
 
 #logo {
@@ -89,15 +96,18 @@ main {
 
 h1 {
   font-size: 35pt;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 17.5pt;
+  font-weight: bold;
 }
 
 h3 {
   margin: 10px 0px 0px 30px;
   font-size: 10pt;
+  font-weight: bold;
 }
 
 /* buttons */
@@ -165,6 +175,7 @@ main textarea {
 
 #student-class-nav ul li {
   display: inline;
+  font-weight: bold;
 }
 
 .nav-selected {
