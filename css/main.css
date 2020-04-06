@@ -30,6 +30,8 @@ aside {
 }
 
 textarea {
+  padding: 5px;
+
   resize: none;
 }
 
@@ -40,7 +42,7 @@ textarea {
 body {
   display: grid;
   grid-template-columns: 1fr 4fr 2fr; /*265px 1107px 548px */
-  grid-template-rows: 12vh 64vh 24vh; /*1fr 6fr 2fr*/ /*129px 724px 272px*/
+  grid-template-rows: 115px 15px 30px calc(100vh - 115px - 15px - 30px - 150px) 150px; /*1fr 6fr 2fr*/ /* 115px 15px 30px 725px 270px*/
 }
 
 header {
@@ -53,40 +55,46 @@ header {
 }
 
 main {
-  grid-area: 2 / 2 / span 2 / span 1;
+  grid-area: 3 / 2 / span 3 / span 1;
 
   display: grid;
   grid-template-rows: subgrid;
 }
 
+#presentation-area,
 #current-question {
+  grid-row: 2 / 3;
+  grid-column: 1;
+}
+
+#submit-question {
   grid-row: 3 / 4;
   grid-column: 1;
 }
 
 #class-overview {
-  grid-area: 2 / 1 / span 2 / span 1;
+  grid-area: 3 / 1 / span 3 / span 1;
 }
 
 #variable-content {
-  grid-area: 2 / 3 / span 2 / span 1;
-}
-
-/* variable-content grid */
-
-#variable-content {
-  display: grid;
-  grid-template-rows: 50px auto 100px;
-}
-
-#chat-section {
-  grid-area: 2 / 1 / span 2 / span 1;
+  grid-area: 2 / 3 / span 4 / span 1;
 
   display: grid;
   grid-template-rows: subgrid;
 }
 
-/* chat-section */
+/* variable-content */
+
+#content-nav {
+  grid-area: 1 / 1 / span 2 / span 1;
+}
+
+#chat-section {
+  grid-area: 3 / 1 / span 2 / span 1;
+
+  display: grid;
+  grid-template-rows: auto 100px;
+}
 
 /* header */
 
@@ -103,6 +111,27 @@ main {
 
 #class {
   justify-self: left;
+}
+
+/* navigation */
+
+.tab-nav,
+.tab-nav ul {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-auto-columns: 175px;
+}
+
+.tab-nav ul {
+  grid-area: 1 / 1 / span all / span all;
+}
+
+.tab-nav li {
+  grid-row: 2 / span 1;
+}
+
+.tab-nav .tab-selected {
+  grid-row: 1 / span 2;
 }
 
 /* === styling === */
@@ -134,6 +163,37 @@ h3 {
   border-radius: 10px;
 }
 
+/* navigation */
+
+.tab-nav ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+
+  align-items: stretch;
+}
+
+.tab-nav ul li {
+  padding: 6px 10px;
+
+  font-weight: bold;
+  background-color: #d8d8d8;
+}
+
+.tab-nav ul li:first-child {
+  border-radius: 10px 0px 0px 0px;
+}
+
+.tab-nav ul li:last-child {
+  border-radius: 0px 10px 0px 0px;
+}
+
+.tab-selected {
+  font-size: 15pt;
+
+  border-radius: 10px 10px 0px 0px !important;
+}
+
 /* main */
 
 main {
@@ -143,6 +203,8 @@ main {
 
 #presentation-area {
   margin: 20px 20px 0px 20px;
+  border-radius: 5px;
+
   background: white;
 }
 
@@ -164,6 +226,10 @@ main textarea {
 
 #class-overview {
   margin-top: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+
+  overflow: auto;
 }
 
 .people {
@@ -179,22 +245,18 @@ main textarea {
 
 #variable-content {
   border-radius: 10px 10px 0px 0px;
+}
 
+#content-nav {
+  background-color: white;
+}
+
+.chat {
   background-color: #f6eef7;
 }
 
-/* => navigation */
-#student-class-nav ul {
-  list-style-type: none;
-}
-
-#student-class-nav ul li {
-  display: inline;
-  font-weight: bold;
-}
-
-.nav-selected {
-  font-size: 15pt;
+.chat .tab-selected {
+  background-color: #fbcff3;
 }
 
 /* chat-section */
@@ -204,11 +266,15 @@ main textarea {
 }
 
 #chat {
+  overflow: auto;
+
+  border-radius: 5px;
+
   background-color: white;
 }
 
 #chat-section form {
-  margin: auto 0px;
+  margin: 15px 0px;
 }
 
 #chat-section textarea {

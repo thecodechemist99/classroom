@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
     <title>
       classroom
     </title>
@@ -34,7 +35,7 @@
     <main>
       <div id="presentation-area"></div>
       <div id="current-question"></div>
-      <form action="" method="post">
+      <form id="submit-question" action="" method="post">
         <textarea name="question"></textarea>
         <input
           class="submit"
@@ -45,14 +46,17 @@
       </form>
     </main>
 
-    <aside id="variable-content">
-      <nav id="student-class-nav">
+    <aside id="variable-content" class="chat">
+      <nav id="content-nav" class="tab-nav">
         <ul>
-          <li class="nav-selected">
+          <li class="tab-selected">
             <img src="images/icon_speechbubbles.svg" alt="speechbubbles" />
             Chat
           </li>
-          <li>Dateien</li>
+          <li>
+            <img src="images/icon_folder.svg" alt="folder" />
+            Dateien
+          </li>
         </ul>
       </nav>
       <div id="chat-section">
