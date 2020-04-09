@@ -41,8 +41,8 @@ textarea {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 4fr 2fr; /*265px 1107px 548px */
-  grid-template-rows: 115px 15px 30px calc(100vh - 115px - 15px - 30px - 150px) 150px; /*1fr 6fr 2fr*/ /* 115px 15px 30px 725px 270px*/
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-rows: 115px 15px 30px calc(100vh - 115px - 15px - 30px - 150px) 150px;
 }
 
 header {
